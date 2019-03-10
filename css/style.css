@@ -88,40 +88,102 @@ textarea {
 	top: 0;
 }
 
-.ba-row {
+.ba-rows {
     height: 25%;
 	width: 100%;
 	position: absolute;
 	top: 0;
 }
 
+.ba-square{
+	position: absolute;
+	height: 100%;
+	width: 12.5%
+}
+
+.ba-square:nth-of-type(2){
+	left: 12.5%;
+}
+
+.ba-square:nth-of-type(3){
+	left: 25%;
+}
+
+.ba-square:nth-of-type(4){
+	left: 37.5%;
+}
+
+.ba-square:nth-of-type(5){
+	left: 50%;
+}
+
+.ba-square:nth-of-type(6){
+	left: 62.5%;
+}
+.ba-square:nth-of-type(7){
+	left: 75%;
+}
+
+.ba-square:nth-of-type(8){
+	left: 87.5%;
+}
+
 .sector-dark{
 	position: relative;
 }
 
-.sector-dark .ba-row:nth-of-type(1){
+.sector-dark .ba-rows:nth-of-type(1), .sector-light .ba-rows:nth-of-type(1){
 	top: 0;
 }
 
-.sector-dark .ba-row:nth-of-type(2){
+.sector-dark .ba-rows:nth-of-type(2), .sector-light .ba-rows:nth-of-type(2){
 	top: 25%;
 }
 
-.sector-dark .ba-row:nth-of-type(3){
+.sector-dark .ba-rows:nth-of-type(3), .sector-light .ba-rows:nth-of-type(3){
 	top: 50%;
 }
 
-.sector-dark .ba-row:nth-of-type(4){
+.sector-dark .ba-rows:nth-of-type(4), .sector-light .ba-rows:nth-of-type(4){
 	top: 75%;
 }
 
-.ba-row .ba-square:nth-child(1){
+.ba-rows .ba-square:nth-child(1){
 	left: 0;
 }
 
-.ba-row:nth-child(odd) .ba-square:nth-child(odd){
+.ba-rows:nth-child(odd) .ba-square:nth-child(odd){
 	background-color: #000;
 }
 
+.ba-rows:nth-child(even) .ba-square:nth-child(even){
+	background-color: #000;
+}
 
+.sector-light .ba-rows:nth-of-type(3) .ba-square:nth-child(odd):before, .sector-light  .ba-rows:nth-child(even) .ba-square:nth-child(even):before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0;
+	box-sizing: border-box;
+	top: 10%;
+	left: 10%;	
+}
 
+.sector-dark .ba-rows:nth-of-type(1) .ba-square:nth-child(odd):before, .sector-dark  .ba-rows:nth-child(2) .ba-square:nth-child(even):before, .sector-dark  .ba-rows:nth-child(3) .ba-square:nth-child(odd):before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	background-color: red;
+	margin: 0;
+	box-sizing: border-box;
+	top: 10%;
+	left: 10%;
+}
